@@ -1,15 +1,14 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Box, Heading, Text, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <Box textAlign="center" p={10}>
+      <Heading>Welcome to the Notes App</Heading>
+      <Text fontSize="xl" mt={4}>Your simple and effective solution to note-taking.</Text>
+      <Button colorScheme="blue" mt={8} as={Link} to="/view-notes">View Notes</Button>
+    </Box>
+  );
 };
 
 export default Index;
